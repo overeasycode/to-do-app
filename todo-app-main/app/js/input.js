@@ -147,6 +147,8 @@ function getTodos() {
   }
 
   todos.forEach(function (todo) {
+    count++;
+    countItems();
     //create div
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("main__input");
