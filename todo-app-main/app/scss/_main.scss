@@ -1,0 +1,199 @@
+.main {
+  z-index: 99;
+  &__container {
+    margin: 0 auto;
+    max-width: 33.9375rem;
+    margin-top: 4.6875rem;
+    @include breakpoint-down(small) {
+      max-width: 87vw;
+    }
+  }
+  &__top {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    text-transform: uppercase;
+    letter-spacing: 0.625rem;
+    font-size: 1.25rem;
+    h1 {
+      color: white;
+      flex-grow: 1;
+      margin: 0;
+      padding: 0;
+      @include breakpoint-down(small) {
+        font-size: 1.875rem;
+      }
+    }
+    .change {
+      display: block;
+      background-repeat: no-repeat;
+      width: 1.6875rem;
+      height: 1.875rem;
+      cursor: pointer;
+
+      &-light {
+        background-image: url("/images/icon-moon.svg");
+      }
+      &-dark {
+        background-image: url("/images/icon-sun.svg");
+      }
+
+      @include breakpoint-down(small) {
+        transform: scale(80%);
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 50px;
+  }
+  &__input {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    background-color: white;
+    height: 69px;
+    border-radius: 0.5rem;
+    align-items: center;
+    transition: all 300ms ease-in;
+    @include breakpoint-down(small) {
+      height: 57px;
+    }
+    &:hover {
+      transform: scale(105%);
+    }
+    &-dark {
+      background-color: $veryDarkDesaturatedBlue;
+    }
+    &--padding {
+      margin-bottom: 0.3125rem;
+      max-width: 544px;
+      justify-content: space-around;
+    }
+    input[type="checkbox"] {
+      visibility: hidden;
+    }
+    input[type="text"] {
+      font-family: "Josefin Sans";
+      font-size: 1.25rem;
+      outline: none;
+      border: 0;
+      background-color: transparent;
+      @include breakpoint-down(small) {
+        display: grid;
+        margin-left: 0.8125rem;
+        font-size: $baseF;
+      }
+    }
+    .darkTextBox {
+      color: $lightGrayishBlue;
+      background-color: $veryDarkDesaturatedBlue;
+    }
+  }
+  &__footer {
+    margin-top: 1.1875rem;
+  }
+  &__todoContainer {
+    border-radius: 0.5rem;
+    &--list {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      &-dark {
+        * {
+          background-color: $veryDarkDesaturatedBlue;
+          > span {
+            background-color: $veryDarkDesaturatedBlue;
+            border-color: $veryDarkGrayishBlue;
+          }
+        }
+      }
+      &-light {
+        * {
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+
+.todo-item {
+  color: $darkGrayishBlue;
+  font-size: $baseF;
+  margin-left: 1.25rem;
+  flex: 1;
+  text-align: left;
+  background-color: transparent;
+  @include breakpoint-down(small) {
+    font-size: 0.875rem;
+  }
+}
+
+.checked {
+  > .todo-item {
+    opacity: 0.5;
+    text-decoration: line-through;
+  }
+  > .check {
+    animation: checkedAnim 0.3s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+  }
+}
+.todo-item {
+  cursor: pointer;
+}
+
+.unchecked {
+  > .check {
+    animation: unchecked 0.5s cubic-bezier(0.68, 0.13, 0.13, 0.96) forwards;
+  }
+}
+.check {
+  display: block;
+  border: 1px solid $lightGrayishBlue;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  margin-left: 1.5625rem;
+  padding-right: 25px;
+  transition: all 340ms ease;
+  &-dark {
+    border-color: $veryDarkGrayishBlue;
+  }
+}
+.checkBig {
+  transform: scale(120%);
+  border-width: 1.8px;
+  border-color: $inputHover;
+}
+.trashButton {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/images/icon-cross.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 0;
+  cursor: pointer;
+  visibility: hidden;
+  margin-right: 20px;
+  @include breakpoint-down(small) {
+    visibility: visible;
+  }
+}
+.trashMobileButton {
+  visibility: visible;
+  @include breakpoint-down(small) {
+    visibility: visible;
+  }
+}
+.trashSlide {
+  animation: trashSlide 0.3s ease forwards;
+}
+.trashSlider {
+  opacity: 0;
+}
+
+.draggable {
+  cursor: move;
+}

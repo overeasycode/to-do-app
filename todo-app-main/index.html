@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="app/scss/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>overeasycode | Todo app</title>
+  </head>
+  <body class="body body-light">
+    <main class="main">
+      <div class="main__container">
+        <div class="main__top">
+          <h1>Todo</h1>
+          <span class="change change-light"></span>
+        </div>
+        <div class="main__bottom">
+          <div class="main__input boxShadow">
+            <form>
+              <input type="checkbox" aria-label="Add todo" /><input
+                class="textBox lightTextBox"
+                id="myInput"
+                type="text"
+                placeholder="Create a new todo.."
+                minlength="4"
+                maxlength="35"
+                aria-label="Add todo"
+                required
+                aria-required="true"
+              />
+              <button id="myBtn"></button>
+            </form>
+            <span class="check"></span>
+          </div>
+          <div class="main__todoContainer boxShadow">
+            <ul class="main__todoContainer--list"></ul>
+            <!-- create div.todo > span (check) + li (item) > button (deletion)-->
+          </div>
+          <div class="main__footer">
+            <div class="footer footer__grid boxShadow">
+              <!-- Add dynamic number -->
+              <p class="footer__items">
+                <span class="footer__counter">0</span> items left
+              </p>
+              <p class="footer__all active">All</p>
+              <p class="footer__active">Active</p>
+              <p class="footer__completed">Completed</p>
+              <p class="footer__clearComp">Clear Completed</p>
+            </div>
+            <div class="footer footer__grid2 boxShadow">
+              <p class="footer__all fa2 active">All</p>
+              <p class="footer__active fac2">Active</p>
+              <p class="footer__completed fc2">Completed</p>
+            </div>
+            <h6>Drag and drop to reorder list</h6>
+            <div class="attribution" style="color: hsl(235, 19%, 35%)">
+              Challenge by
+              <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+              >. Coded by
+              <a href="https://github.com/overeasycode">overeasycode</a>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <noscript>You need to enable Javascript to view this site.</noscript>
+    <script src="./app/js/input.js"></script>
+    <script src="app/js/change.js"></script>
+    <script src="app/js/drag&drop.js"></script>
+    <script src="app/js/filterToDo.js"></script>
+  </body>
+</html>

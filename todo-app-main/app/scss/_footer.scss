@@ -1,0 +1,95 @@
+.footer {
+  &__grid {
+    display: grid;
+    grid-template-areas: "counter all active completed clear";
+    grid-template-columns: 1fr repeat(3, 0.5fr) 1.4fr;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 1rem;
+    color: $darkGrayishBlue;
+    transition: all 300ms ease-in;
+    @include breakpoint-down(small) {
+      font-size: 12px;
+    }
+    &-dark {
+      background-color: $veryDarkDesaturatedBlue !important;
+    }
+  }
+  &__items {
+    grid-area: counter;
+    opacity: 0.8;
+  }
+  &__all {
+    grid-area: all;
+    justify-self: center;
+    font-weight: $largeWeight;
+    cursor: pointer;
+    transition: all 350ms ease;
+    @include breakpoint-down(small) {
+      visibility: hidden;
+    }
+  }
+  &__active {
+    grid-area: active;
+    justify-self: center;
+    font-weight: $largeWeight;
+    cursor: pointer;
+    transition: all 350ms ease;
+    @include breakpoint-down(small) {
+      visibility: hidden;
+    }
+  }
+  &__completed {
+    grid-area: completed;
+    justify-self: center;
+    font-weight: $largeWeight;
+    cursor: pointer;
+    transition: all 350ms ease;
+    @include breakpoint-down(small) {
+      visibility: hidden;
+    }
+  }
+  &__clearComp {
+    grid-area: clear;
+    justify-self: center;
+    cursor: pointer;
+    transition: all 350ms ease;
+  }
+}
+
+.footerHover {
+  color: $veryDarkGrayishBlue;
+}
+
+.footer__grid2 {
+  background-color: white;
+  @include breakpoint-down(small) {
+    visibility: visible;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 14px;
+
+    flex-direction: row;
+    > p {
+      visibility: visible;
+    }
+  }
+  visibility: hidden;
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  color: #9394a5;
+  border-radius: 0.5rem;
+  transition: all 300ms ease-in;
+
+  > p {
+    font-size: 12px;
+    text-align: center;
+    &:not(:last-child) {
+      margin-right: 0.625rem;
+    }
+  }
+}

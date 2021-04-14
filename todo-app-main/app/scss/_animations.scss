@@ -1,0 +1,43 @@
+@keyframes checkedAnim {
+  from {
+    background-position: -90px;
+  }
+  to {
+    background: url("/images/icon-check.svg"), $checkBg;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%, cover;
+    border: 0;
+  }
+}
+
+@keyframes unchecked {
+  from {
+    background: url("/images/icon-check.svg"), $checkBg;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%, cover;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    background-position: -90px;
+  }
+}
+
+@keyframes trashSlide {
+  from {
+    visibility: visible;
+  }
+  1% {
+    opacity: 1;
+  }
+  99% {
+    visibility: hidden;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+}

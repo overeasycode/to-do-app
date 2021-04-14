@@ -1,0 +1,82 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+  font-size: $baseF;
+  font-weight: $medWeight;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  //light theme
+  background-color: $veryLightGray;
+  &-light {
+    content: "";
+    display: block;
+    background-image: url("/images/bg-desktop-light.jpg");
+    background-position: center top;
+    background-size: 101vw 30vh;
+    background-repeat: no-repeat;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include breakpoint-down(small) {
+      background-image: url("/images/bg-mobile-light.jpg");
+      background-size: 101vw 30vh;
+    }
+  }
+  &-dark {
+    content: "";
+    display: block;
+    background-image: url("/images/bg-desktop-dark.jpg");
+    background-color: $veryDarkBlue;
+    background-position: center top;
+    background-size: 101vw 30vh;
+    background-repeat: no-repeat;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include breakpoint-down(small) {
+      background-image: url("/images/bg-mobile-dark.jpg");
+      background-size: 101vw 30vh;
+    }
+  }
+}
+
+.active {
+  color: $brightBlue;
+}
+
+h6 {
+  color: $darkGrayishBlue;
+  font-size: 0.875rem;
+}
+
+h1 {
+  text-align: left;
+}
+
+#myBtn {
+  visibility: hidden;
+}
+.pointer {
+  cursor: pointer;
+}
+.boxShadow {
+  -webkit-box-shadow: 0px 11px 18px -10px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 11px 18px -10px rgba(0, 0, 0, 0.14);
+}

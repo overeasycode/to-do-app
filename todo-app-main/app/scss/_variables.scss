@@ -1,0 +1,30 @@
+//Colors
+
+//primary
+$brightBlue: #3a7bfd;
+$checkBg: linear-gradient(0.45turn, #57ddff, #c058f3);
+$inputHover: rgba(47, 133, 231, 0.712);
+
+//light
+$veryLightGray: hsl(0, 0%, 98%);
+$veryLightGrayishBlue: hsl(236, 33%, 92%);
+$lightGrayishBlue: #d2d3db;
+$darkGrayishBlue: hsl(236, 9%, 61%);
+$veryDarkGrayishBlue: hsl(235, 19%, 35%); // footer hover
+
+//dark
+$veryDarkBlue: hsl(235, 21%, 11%);
+$veryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+$dtLightGrayishBlue: hsl(234, 39%, 85%);
+$dtHoverLightGBlue: hsl(236, 33%, 92%); //hover state
+$dtVeryDarkGBlue: hsl(233, 14%, 35%);
+$dtDarkerDarkGBlue: hsl(237, 14%, 26%); //darker
+
+//Font Stuff
+
+//sizes
+$baseF: 1.125rem;
+
+//weights:
+$medWeight: 400;
+$largeWeight: 700;
